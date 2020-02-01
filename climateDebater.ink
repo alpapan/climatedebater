@@ -53,7 +53,7 @@ You may find some to be confronting, apologies but bear with us and try to choos
 
 This will be written based on results of previous answers but for the time being select one
 
-+ {!denial.humanscanmakeit} Explore the myths of climate debate -> denial -> exploration
++ {!denial.humanscanmakeit && !denial.co2risingnoimpact.done && !denial.globalwarmingisnatural.done && !denial.humanimpactissmall.done} Explore the myths of climate debate -> denial -> exploration
 + {!positive_outcomes.done} Explore the positive outcomes from climate action -> positive_outcomes  -> exploration
 + Explore how you can help yourself or people with actions -> help_people -> exploration
 

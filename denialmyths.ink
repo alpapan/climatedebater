@@ -26,7 +26,7 @@ Let's explore some opinions around the climate change debate.
   # YOUTUBE:sTvqIijqvTg)
    (Could maybe have a detour to naked planet models for more nerdy / numerate types?) 
    ** Even if there is warming, it is due to natural causes -> globalwarmingisnatural
-   ** Ok, I see now -> exploration
+   ** (done) Ok, I see now -> exploration
 
 = globalwarmingisnatural
     This is a bit like a murder mystery. Who are the suspects? 
@@ -41,7 +41,7 @@ Let's explore some opinions around the climate change debate.
     So, if its not natural it must be us. Moving Gigatons of material around isn’t something you can do sneakily - its billions of tons. 
     # YOUTUBE:sKDWW9WlPSc
    ** Well, actually even if the warming cannot be explained by natural causes, the human impact is small, and the impact of continued greenhouse gas emissions will be minor. -> humanimpactissmall
-   ** Ok, I see now -> exploration
+   ** (done) Ok, I see now -> exploration
 
 
 = humanimpactissmall
@@ -56,7 +56,7 @@ Increased costs for households from air conditioning, mitigating impacts of fire
 # YOUTUBE:KeX7x5NtNFg
 Remember - this is for \~1 degree so far and business as usual cases now indicate 3C is likely. If you had 5 drinks at the pub and felt a bit ill then 15 probably isn’t a good idea. This gets down to another problem: the impacts are not linear. Just like with drinking, 1 drink is fine, 3 is not ok to drive and 30 will probably kill you. We can’t assume that this is going to be a smooth or predictable process as we push it further and further. [maybe joke about calling a cab here - just seems most people eat and drink so these are the most accessible analogies]
     ** Whether or not the changes are going to be good for us, humans are very adept at adapting to changes; besides, it's too late to do anything about it, and/or a technological fix is bound to come along when we really need it -> humanscanmakeit
-    ** Ok, I see now -> exploration
+    ** (done) Ok, I see now -> exploration
  
 
 = humanscanmakeit
