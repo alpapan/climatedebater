@@ -12,7 +12,6 @@ VAR GROUPD = 0  //  ~ GROUPD += 1  ~ GROUPD -= 1
 VAR GROUPE = 0  //  ~ GROUPE += 1  ~ GROUPE -= 1 
 VAR GROUPF = 0  //  ~ GROUPF += 1  ~ GROUPF -= 1 
 
-- (begin)
 -> start -> profiling -> reachout 
 
 === start ===
@@ -25,24 +24,22 @@ It is created for your amusement and hopefully you will find useful information 
 It has no warranty or liability, implied or otherwise.
 
 During this game you will first be asked a few questions to identify your attitudes towards the debate.
+
 Then if you belong to one or two of the groups we focused during the jam, you will be able to explore different narratives and identify how you can help yourself to other information.
 
 ->->
 
 === profiling
-- (opts) 
-What do you think about the following images?
+
+* Let's start!
+
 ->greta -> bluemountainbushfire -> starvingcattle -> activism -> coalpower
-
-// or
-//<- tunnel_as_thread(-> greta, -> opts)
-// <- tunnel_as_thread(-> bluemountainbushfire, -> opts)
-
-
 
 + Exit game ->->
 
 === greta
+# CLEAR
+What do you think about this image?
   #  IMAGE: images/greta.jpg
 * Role model for all kids
   ~ GROUPA += 1
@@ -69,6 +66,8 @@ What do you think about the following images?
 
 
 === bluemountainbushfire
+# CLEAR
+What do you think about this image?
  #   IMAGE: images/bmbushfire.jpg
 * Tragedy
   ~ GROUPB += 1
@@ -93,7 +92,8 @@ What do you think about the following images?
 
 
 === starvingcattle
-
+# CLEAR
+What do you think about the following image?
 #   IMAGE: images/cattlestarving.jpg
 * There goes our agriculture
   ~ GROUPB += 1
@@ -108,7 +108,8 @@ What do you think about the following images?
 - 	->->
 
 === activism
-
+# CLEAR
+What do you think about this image?
  #  IMAGE: images/activism.jpg
 * Good for them
   ~ GROUPB += 1
@@ -131,7 +132,8 @@ What do you think about the following images?
 
 
 === coalpower
-
+# CLEAR
+What do you think about this image?
 #   IMAGE: images/coalpower.jpg
 * Government should invest in renewables
   ~ GROUPB += 1
