@@ -3,7 +3,7 @@
 <node CREATED="1580513164224" ID="ID_1851456171" MODIFIED="1580513174405" TEXT="Start">
 <node CREATED="1580513180104" ID="ID_459633749" MODIFIED="1580513182465" POSITION="right" TEXT="Profiling">
 <node CREATED="1580515880539" ID="ID_1589685661" MODIFIED="1580515946720" TEXT="DECOUPLE A/B">
-<node CREATED="1580515948691" ID="ID_311506098" MODIFIED="1580516005827" TEXT="IMAGE AN ACTION">
+<node CREATED="1580515948691" ID="ID_311506098" MODIFIED="1580518988139" TEXT="IMAGE ACTIVISM">
 <node CREATED="1580516022768" ID="ID_935930163" MODIFIED="1580516118768" TEXT="Good for them">
 <richcontent TYPE="NOTE"><html>
   <head>
@@ -87,10 +87,70 @@
 </node>
 </node>
 <node CREATED="1580515977907" ID="ID_1846559060" MODIFIED="1580516294218" TEXT="IMAGE COAL POWER PLANT">
-<node CREATED="1580516230754" ID="ID_70451523" MODIFIED="1580516258120" TEXT="Government should invest in renewables"/>
-<node CREATED="1580516265506" ID="ID_272928488" MODIFIED="1580516299502" TEXT="I will switch to green energy"/>
-<node CREATED="1580516318695" ID="ID_537745921" MODIFIED="1580516338826" TEXT="We need cheap energy"/>
-<node CREATED="1580516339267" ID="ID_1497015576" MODIFIED="1580516350493" TEXT="Expensive, polluting, but necessary right now"/>
+<node CREATED="1580516230754" ID="ID_70451523" MODIFIED="1580519585048" TEXT="Government should invest in renewables">
+<richcontent TYPE="NOTE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      B+1
+    </p>
+    <p>
+      E-1
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+<node CREATED="1580516265506" ID="ID_272928488" MODIFIED="1580519595925" TEXT="I will switch to green energy">
+<richcontent TYPE="NOTE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      A+1
+    </p>
+    <p>
+      F/E-1
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+<node CREATED="1580516318695" ID="ID_537745921" MODIFIED="1580519716050" TEXT="We need cheap energy">
+<richcontent TYPE="NOTE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      F+1
+    </p>
+    <p>
+      B/C/E-1
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+<node CREATED="1580516339267" ID="ID_1497015576" MODIFIED="1580519722715" TEXT="Expensive, polluting, but necessary right now">
+<richcontent TYPE="NOTE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      C/D+1
+    </p>
+    <p>
+      E/B-1
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
 <node CREATED="1580516379211" ID="ID_1609890351" MODIFIED="1580516429474" TEXT="I don&apos;t know, I want to learn more">
 <richcontent TYPE="NOTE"><html>
   <head>

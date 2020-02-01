@@ -32,8 +32,7 @@ Then if you belong to one or two of the groups we focused during the jam, you wi
 === profiling
 - (opts) 
 What do you think about the following images?
-  <-greta
-  <-bluemountainbushfire
+->greta -> bluemountainbushfire -> starvingcattle -> activism -> coalpower
 
 // or
 //<- tunnel_as_thread(-> greta, -> opts)
@@ -92,6 +91,71 @@ What do you think about the following images?
 
 - 	->->
 
+
+=== starvingcattle
+
+  IMAGE: images/cattlestarving.jpg
+* There goes our agriculture
+  ~ GROUPB += 1
+* Nothing money can't solve
+  ~ GROUPD += 1
+  ~ GROUPF += 1
+* What happened?!
+  ~ GROUPC += 1
+  ~ GROUPE -= 1
+  ~ GROUPF -= 1
+
+- 	->->
+
+=== activism
+
+  IMAGE: images/activism.jpg
+* Good for them
+  ~ GROUPB += 1
+* How do I sign up?
+  ~ GROUPA += 1
+* More self promotion!
+  ~ GROUPF += 1
+* Government should pay them
+  ~ GROUPB += 1
+  ~ GROUPD += 1
+* Drop in the ocean
+  ~ GROUPE += 1
+  ~ GROUPF += 1
+* I don't know, I want to learn more
+  ~ GROUPC += 1
+  ~ GROUPE -= 1
+  ~ GROUPF -= 1
+
+- 	->->
+
+
+=== coalpower
+
+  IMAGE: images/coalpower.jpg
+* Government should invest in renewables
+  ~ GROUPB += 1
+  ~ GROUPE -= 1
+* I will switch to green energy
+  ~ GROUPA += 1
+  ~ GROUPE -= 1
+  ~ GROUPF -= 1
+* We need cheap energy
+  ~ GROUPF += 1
+  ~ GROUPB -= 1
+  ~ GROUPC -= 1
+  ~ GROUPE -= 1
+* Expensive, polluting, but necessary right now
+  ~ GROUPC += 1
+  ~ GROUPD += 1
+  ~ GROUPE -= 1
+  ~ GROUPB -= 1
+* I don't know, I want to learn more
+  ~ GROUPC += 1
+  ~ GROUPE -= 1
+  ~ GROUPF -= 1
+
+- 	->->
 
 === reachout
 
