@@ -68,6 +68,19 @@
                     delay += 200.0;
                 }
 
+                else if( splitTag && splitTag.property == "YOUTUBE" ) {
+                    var videoElement = document.createElement('iframe');
+                    videoElement.id = splitTag.val;
+                    videoElement.setAttribute("width","560");
+                    videoElement.setAttribute("height","315");
+                    videoElement.setAttribute("src","https://www.youtube-nocookie.com/embed/" + videoElement.id);
+                    videoElement.setAttribute("allow","accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture");
+                    videoElement.setAttribute("allowfullscreen",1);
+                    storyContainer.appendChild(videoElement);
+                    showAfter(delay, videoElement);
+                    delay += 200.0;
+                }
+
                 // CLASS: className
                 else if( splitTag && splitTag.property == "CLASS" ) {
                     customClasses.push(splitTag.val);
