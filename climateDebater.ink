@@ -43,7 +43,7 @@ What do you think about the following images?
 + Exit game ->->
 
 === greta
-   IMAGE: images/greta.jpg
+  #  IMAGE: images/greta.jpg
 * Role model for all kids
   ~ GROUPA += 1
   ~ GROUPB += 1
@@ -69,7 +69,7 @@ What do you think about the following images?
 
 
 === bluemountainbushfire
-   IMAGE: images/bmbushfire.jpg
+ #   IMAGE: images/bmbushfire.jpg
 * Tragedy
   ~ GROUPB += 1
 * Just another bushfire
@@ -94,7 +94,7 @@ What do you think about the following images?
 
 === starvingcattle
 
-  IMAGE: images/cattlestarving.jpg
+#   IMAGE: images/cattlestarving.jpg
 * There goes our agriculture
   ~ GROUPB += 1
 * Nothing money can't solve
@@ -109,7 +109,7 @@ What do you think about the following images?
 
 === activism
 
-  IMAGE: images/activism.jpg
+ #  IMAGE: images/activism.jpg
 * Good for them
   ~ GROUPB += 1
 * How do I sign up?
@@ -132,7 +132,7 @@ What do you think about the following images?
 
 === coalpower
 
-  IMAGE: images/coalpower.jpg
+#   IMAGE: images/coalpower.jpg
 * Government should invest in renewables
   ~ GROUPB += 1
   ~ GROUPE -= 1
