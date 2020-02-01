@@ -1,7 +1,18 @@
+INCLUDE functions.ink
 # author: many people
 # title: Climate Debater
 # version: 0.01
 
+
+
+VAR GROUPA = 0  //  ~ GROUPA += 1  ~ GROUPA -= 1 
+VAR GROUPB = 0  //  ~ GROUPB += 1  ~ GROUPB -= 1 
+VAR GROUPC = 0  //  ~ GROUPC += 1  ~ GROUPC -= 1 
+VAR GROUPD = 0  //  ~ GROUPD += 1  ~ GROUPD -= 1 
+VAR GROUPE = 0  //  ~ GROUPE += 1  ~ GROUPE -= 1 
+VAR GROUPF = 0  //  ~ GROUPF += 1  ~ GROUPF -= 1 
+
+- (begin)
 -> start -> profiling -> reachout 
 
 === start ===
@@ -19,11 +30,67 @@ Then if you belong to one or two of the groups we focused during the jam, you wi
 ->->
 
 === profiling
+- (opts) 
+What do you think about the following images?
+  <-greta
+  <-bluemountainbushfire
 
-Profiling comes here
+// or
+//<- tunnel_as_thread(-> greta, -> opts)
+// <- tunnel_as_thread(-> bluemountainbushfire, -> opts)
 
 
-->->
+
++ Exit game ->->
+
+=== greta
+   IMAGE: images/greta.jpg
+* Role model for all kids
+  ~ GROUPA += 1
+  ~ GROUPB += 1
+  ~ GROUPE -= 1
+  ~ GROUPF -= 1
+* Snowflake
+  ~ GROUPF += 1
+  ~ GROUPA -= 1
+  ~ GROUPB -= 1
+* Who is that?
+  ~ GROUPD += 1
+  ~ GROUPE += 1
+* Rebel who should leave these things for adults
+  ~ GROUPD += 1
+* I don't know, I want to learn more
+  ~ GROUPC += 1
+  ~ GROUPE -= 1
+  ~ GROUPF -= 1
+
+- 	->->
+
+
+
+
+=== bluemountainbushfire
+   IMAGE: images/bmbushfire.jpg
+* Tragedy
+  ~ GROUPB += 1
+* Just another bushfire
+  ~ GROUPD += 1
+  ~ GROUPE += 1
+  ~ GROUPF += 1
+* Shameful
+  ~ GROUPA += 1
+  ~ GROUPB += 1
+* More funding for RFS
+  ~ GROUPB += 1
+  ~ GROUPD += 1
+  ~ GROUPE -= 1
+  ~ GROUPA -= 1
+* I don't know, I want to learn more
+  ~ GROUPC += 1
+  ~ GROUPE -= 1
+  ~ GROUPF -= 1
+
+- 	->->
 
 
 === reachout
