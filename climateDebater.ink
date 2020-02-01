@@ -33,7 +33,7 @@ Then if you belong to one or two of the groups we focused during the jam, you wi
 
 * Let's start!
 
-->greta -> bluemountainbushfire -> starvingcattle -> activism -> coalpower
+->greta -> bluemountainbushfire -> starvinglivestock -> activism -> coalpower
 
 + Exit game ->->
 
@@ -91,10 +91,10 @@ What do you think about this image?
 - 	->->
 
 
-=== starvingcattle
+=== starvinglivestock
 # CLEAR
 What do you think about the following image?
-#   IMAGE: images/cattlestarving.jpg
+#   IMAGE: images/sheepgrazing.jpg
 * There goes our agriculture
   ~ GROUPB += 1
 * Nothing money can't solve

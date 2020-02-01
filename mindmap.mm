@@ -382,8 +382,36 @@
   </body>
 </html>
 </richcontent>
-<node CREATED="1580513296831" ID="ID_668980833" MODIFIED="1580513306547" TEXT="if CREATIVE &gt; 1: question 6"/>
-<node CREATED="1580513307339" ID="ID_649334803" MODIFIED="1580513317978" TEXT="if PEDANTIC &lt; 10: question 7"/>
+<node CREATED="1580527034915" ID="ID_763475602" MODIFIED="1580527039574" TEXT="Group C-F">
+<node CREATED="1580527002296" ID="ID_160275351" MODIFIED="1580527023823" TEXT="People who are more curious but not dismissive">
+<node CREATED="1580526963414" ID="ID_922783753" MODIFIED="1580526970781" TEXT="Are scientists faking their data?"/>
+</node>
+<node CREATED="1580526988850" ID="ID_447190739" MODIFIED="1580526995369" TEXT="People who are more disengaged/dismissive">
+<node CREATED="1580526903391" ID="ID_1429207075" MODIFIED="1580526963420" TEXT="Will post-pension life quality be affected by climate change?">
+<richcontent TYPE="NOTE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      insurance companies
+    </p>
+    <p>
+      fossil fuels
+    </p>
+    <p>
+      investment companies
+    </p>
+    <p>
+      cost of living
+    </p>
+  </body>
+</html></richcontent>
+</node>
+</node>
+</node>
+<node CREATED="1580527046191" ID="ID_1883903624" MODIFIED="1580527048375" TEXT="Group A"/>
+<node CREATED="1580527048730" ID="ID_1068122815" MODIFIED="1580527050405" TEXT="Group B"/>
 </node>
 <node CREATED="1580513649605" FOLDED="true" ID="ID_467839244" MODIFIED="1580515283247" POSITION="left" TEXT="VARIABLES">
 <node CREATED="1580513758982" ID="ID_43976580" MODIFIED="1580513762984" TEXT="PROACTIVE"/>
