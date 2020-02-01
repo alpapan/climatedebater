@@ -1,4 +1,7 @@
 INCLUDE functions.ink
+INCLUDE profile.ink
+
+
 # author: many people
 # title: Climate Debater
 # version: 0.01
@@ -38,7 +41,7 @@ Then if you belong to one of the groups we focused during the jam, you will be a
 We're going to show you some images.
 You may find some to be confronting, apologies but bear with us and try to choose the answer that is the closest to your initial thoughts .
 
-* Let's start!
+* Ok!
 ->greta -> bluemountainbushfire -> starvinglivestock -> activism -> coalpower
  -> exploration 
 
@@ -47,7 +50,7 @@ You may find some to be confronting, apologies but bear with us and try to choos
 # CLEAR
 (Score A: {GROUPA}; B: {GROUPB}; C: {GROUPC}; D: {GROUPD}; E: {GROUPE}; F: {GROUPF};)
 
-THis will be written to automatically redirect for the time being select one
+// THis will be written to automatically redirect for the time being select one
 
 + Explore the myths of climate debate -> denial -> exploration
 + Explore the positive outcomes from climate action -> positive_outcomes  -> exploration
@@ -71,9 +74,9 @@ Let's explore some opinions around the climate change debate.
   Fringe case. 
   Show Mauna Loa observatory data
   There are companies that sell industrial equipment for this and they are very precise and Swiss and…. On youtube!  
-  // <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/ONtHGdP9mow" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  # YOUTUBE:ONtHGdP9mow
   You can even buy a sensor for your fishtank 
-    // <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/v=An_A2XnI6IQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  # YOUTUBE:An_A2XnI6IQ
   Long story short, there’s no magic here: we can measure this using home aquarium kit and the numbers do not lie. 
   ** Well, CO2 may be rising but it has no <i>real</i> impact on the climate -> co2risingnoimpact
 
@@ -81,19 +84,23 @@ Let's explore some opinions around the climate change debate.
 = co2risingnoimpact
   Land temperature data evidence for warming
   Ocean data - takes a lot more energy to heat up an ocean than air (how much does swimming pool heating cost versus aircon… a lot)
-  We know this from first principles - more CO2 causes more energy absorbtion of emitted UV (maybe get a youtube with Tim Schmidt? If not maybe this: https://www.youtube.com/watch?v=sTvqIijqvTg)
+  We know this from first principles - more CO2 causes more energy absorbtion of emitted UV (maybe get a youtube with Tim Schmidt? If not maybe this: 
+  # YOUTUBE:sTvqIijqvTg)
    (Could maybe have a detour to naked planet models for more nerdy / numerate types?) 
    ** Even if there is warming, it is due to natural causes -> globalwarmingisnatural
    ** Ok, I see now -> exploration
 
 = globalwarmingisnatural
     This is a bit like a murder mystery. Who are the suspects? 
-    Volcanos: no evidence of any change here. We would notice. https://www.theguardian.com/environment/2019/may/30/humans-and-volcanoes-caused-nearly-all-of-global-heating-in-past-140-years
+    Volcanos: no evidence of any change here. We would notice. 
+    See https://www.theguardian.com/environment/2019/may/30/humans-and-volcanoes-caused-nearly-all-of-global-heating-in-past-140-years
     Oceans and biosphere combusting more (maybe, but bushfires and permafrost melt seem to be driven by warming, not vice versa plus why all the warming so far when we’ve only just seen the fires pick up recently?) 
-    Slowdown of sedimentary rock formation: Once again, no evidence. Ruled out plus its too damn slow to explain rapid change. https://earthobservatory.nasa.gov/features/CarbonCycle/page2.php
-    Sunspots / changes in solar output: We measure this and it can’t explain the level of radiative forcing and temperature change. https://climate.nasa.gov/blog/2910/what-is-the-suns-role-in-climate-change/
+    Slowdown of sedimentary rock formation: Once again, no evidence. Ruled out plus its too damn slow to explain rapid change. 
+    See https://earthobservatory.nasa.gov/features/CarbonCycle/page2.php
+    Sunspots / changes in solar output: We measure this and it can’t explain the level of radiative forcing and temperature change. 
+    See https://climate.nasa.gov/blog/2910/what-is-the-suns-role-in-climate-change/
     So, if its not natural it must be us. Moving Gigatons of material around isn’t something you can do sneakily - its billions of tons. 
-    Good video here https://youtu.be/sKDWW9WlPSc 
+    # YOUTUBE:sKDWW9WlPSc
    ** Well, actually even if the warming cannot be explained by natural causes, the human impact is small, and the impact of continued greenhouse gas emissions will be minor. -> humanimpactissmall
    ** Ok, I see now -> exploration
 
@@ -101,12 +108,13 @@ Let's explore some opinions around the climate change debate.
 = humanimpactissmall
 
 The warming we have experienced thus far is small and yet in Australia we are experiencing:
-Drought / Aus specific stuff https://www.youtube.com/watch?v=jIy0t5P0CUQ
+Drought / Aus specific stuff 
+# YOUTUBE:jIy0t5P0CUQ
 Extreme temperatures
 Declining agricultural production
 Heat stress
 Increased costs for households from air conditioning, mitigating impacts of fires, floods, higher food costs. 
-Good video https://www.youtube.com/watch?v=KeX7x5NtNFg
+# YOUTUBE:KeX7x5NtNFg
 Remember - this is for \~1 degree so far and business as usual cases now indicate 3C is likely. If you had 5 drinks at the pub and felt a bit ill then 15 probably isn’t a good idea. This gets down to another problem: the impacts are not linear. Just like with drinking, 1 drink is fine, 3 is not ok to drive and 30 will probably kill you. We can’t assume that this is going to be a smooth or predictable process as we push it further and further. [maybe joke about calling a cab here - just seems most people eat and drink so these are the most accessible analogies]
     ** Whether or not the changes are going to be good for us, humans are very adept at adapting to changes; besides, it's too late to do anything about it, and/or a technological fix is bound to come along when we really need it -> humanscanmakeit
     ** Ok, I see now -> exploration
@@ -114,12 +122,14 @@ Remember - this is for \~1 degree so far and business as usual cases now indicat
 
 = humanscanmakeit
 Two things:
-The fix has come along. We have cheap renewables and can transition. We can afford it [link back to all the benefits of climate mitigation elsewhere on the site] https://www.youtube.com/watch?v=Jc4wDL16-hU. Why not do it now? Its not like interest rates are high or we can’t afford it. 
+The fix has come along. We have cheap renewables and can transition. We can afford it [link back to all the benefits of climate mitigation elsewhere on the site] 
+# YOUTUBE:Jc4wDL16-hU
+ Why not do it now? Its not like interest rates are high or we can’t afford it. 
 “Humans are adept at adapting”: this is like a 37yo with dad bod saying “hold my beer while I hit the half pipe” - we literally have no idea how this will pan out because we have not seen anything like it before. We do not have any prior examples of humans managing major climate change because it hasn’t happened. [link to Jared Diamond / fossil record data talks - will dig some up]
-   ** Nope, this is giberrish, let's see what else you have to say
+   ** No, I don't agree but let's see what else you have to say
    ~ GROUPF += 1
    ->  exploration
-   ** Nope, I'm not convinced, I'll have to read more but in meantime let's agree to disagree
+   ** No, I'm not convinced, I'll have to read more but in meantime let's agree to disagree
    ~ GROUPC += 1
    ~ GROUPD += 1
    ->  exploration
@@ -228,128 +238,6 @@ These issues are not too prevalent if smoke and smog levels are kept to a minimu
 
 - ->->
 
-=== greta
-# CLEAR
-What do you think about this image?
-  #  IMAGE: images/greta.jpg
-* Role model for all kids
-  ~ GROUPA += 1
-  ~ GROUPB += 1
-  ~ GROUPE -= 1
-  ~ GROUPF -= 1
-* Snowflake
-  ~ GROUPF += 1
-  ~ GROUPA -= 1
-  ~ GROUPB -= 1
-* Who is that?
-  ~ GROUPD += 1
-  ~ GROUPE += 1
-* Rebel who should leave these things for adults
-  ~ GROUPD += 1
-* I don't know, I want to learn more
-  ~ GROUPC += 1
-  ~ GROUPE -= 1
-  ~ GROUPF -= 1
-
-- 	->->
-
-
-
-
-=== bluemountainbushfire
-# CLEAR
-What do you think about this image?
- #   IMAGE: images/bmbushfire.jpg
-* Tragedy
-  ~ GROUPB += 1
-* Just another bushfire
-  ~ GROUPD += 1
-  ~ GROUPE += 1
-  ~ GROUPF += 1
-* Shameful
-  ~ GROUPA += 1
-  ~ GROUPB += 1
-* More funding for RFS
-  ~ GROUPB += 1
-  ~ GROUPD += 1
-  ~ GROUPE -= 1
-  ~ GROUPA -= 1
-* I don't know, I want to learn more
-  ~ GROUPC += 1
-  ~ GROUPE -= 1
-  ~ GROUPF -= 1
-
-- 	->->
-
-
-=== starvinglivestock
-# CLEAR
-What do you think about the following image?
-#   IMAGE: images/sheepgrazing.jpg
-* There goes our agriculture
-  ~ GROUPB += 1
-* Nothing money can't solve
-  ~ GROUPD += 1
-  ~ GROUPF += 1
-* What happened?!
-  ~ GROUPC += 1
-  ~ GROUPE -= 1
-  ~ GROUPF -= 1
-
-- 	->->
-
-=== activism
-# CLEAR
-What do you think about this image?
- #  IMAGE: images/activism.jpg
-* Good for them
-  ~ GROUPB += 1
-* How do I sign up?
-  ~ GROUPA += 1
-* More self promotion!
-  ~ GROUPF += 1
-* Organisations should support actions like these
-  ~ GROUPB += 1
-  ~ GROUPD += 1
-* Drop in the ocean
-  ~ GROUPE += 1
-  ~ GROUPF += 1
-* I don't know, I want to learn more
-  ~ GROUPC += 1
-  ~ GROUPE -= 1
-  ~ GROUPF -= 1
-
-- 	->->
-
-
-=== coalpower
-# CLEAR
-What do you think about this image?
-#   IMAGE: images/coalpower.jpg
-* Government should invest in renewables
-  ~ GROUPB += 1
-  ~ GROUPE -= 1
-* I will switch to green energy
-  ~ GROUPA += 1
-  ~ GROUPE -= 1
-  ~ GROUPF -= 1
-* We need cheap energy
-  ~ GROUPF += 1
-  ~ GROUPB -= 1
-  ~ GROUPC -= 1
-  ~ GROUPE -= 1
-* Expensive, polluting, but necessary right now
-  ~ GROUPC += 1
-  ~ GROUPD += 1
-  ~ GROUPE -= 1
-  ~ GROUPB -= 1
-* I don't know, I want to learn more
-  ~ GROUPC += 1
-  ~ GROUPE -= 1
-  ~ GROUPF -= 1
-
--
--> DONE
 
 === reachout
 

@@ -1,3 +1,16 @@
+
+var globalChoiceVariables = [0, 0, 0, 0, 0, 0]
+
+function updateChoices(story){
+  globalChoiceVariables[0] = story.variablesState.$("GROUPA");
+  globalChoiceVariables[1] = story.variablesState.$("GROUPB");
+  globalChoiceVariables[2] = story.variablesState.$("GROUPC");
+  globalChoiceVariables[3] = story.variablesState.$("GROUPD");
+  globalChoiceVariables[4] = story.variablesState.$("GROUPE");
+  globalChoiceVariables[5] = story.variablesState.$("GROUPF");
+
+}
+
 (function(storyContent) {
 
     // Create ink story from the content using inkjs
@@ -149,12 +162,18 @@
                 // Remove all existing choices
                 removeAll("p.choice");
 
+                // update radar graph
+                updateChoices(story);
+
                 // Tell the story where to go next
                 story.ChooseChoiceIndex(choice.index);
 
                 // Aaand loop
                 continueStory();
             });
+
+            // pass variables from state to a global array of variables or a function or something
+
         });
 
         // shuffle the choices/children
