@@ -3,6 +3,8 @@ INCLUDE profile.ink
 INCLUDE denialmyths.ink
 INCLUDE helping.ink
 INCLUDE positives.ink
+INCLUDE consequences.ink
+
 
 # author: many people
 # title: Climate Debater
@@ -56,6 +58,7 @@ This will be written based on results of previous answers but for the time being
 + {!denial.humanscanmakeit && !denial.co2risingnoimpact.done && !denial.globalwarmingisnatural.done && !denial.humanimpactissmall.done} Explore the myths of climate debate -> denial -> exploration
 + {!positive_outcomes.done} Explore the positive outcomes from climate action -> positive_outcomes  -> exploration
 + Explore how you can help yourself or people with actions -> help_people -> exploration
++ {!consequences.consider_consequences.done} Explore the likely consequences of climate heating -> consequences -> exploration
 
 - -> reachout
 
