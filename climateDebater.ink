@@ -42,15 +42,14 @@ We're going to show you some images.
 You may find some to be confronting, apologies but bear with us and try to choose the answer that is the closest to your initial thoughts .
 
 * Ok!
-->greta -> bluemountainbushfire -> starvinglivestock -> activism -> coalpower
- -> exploration 
+->greta -> bluemountainbushfire -> starvinglivestock -> activism -> coalpower -> exploration 
 
 === exploration
 
 # CLEAR
 (Score A: {GROUPA}; B: {GROUPB}; C: {GROUPC}; D: {GROUPD}; E: {GROUPE}; F: {GROUPF};)
 
-// THis will be written to automatically redirect for the time being select one
+This will be written based on results of previous answers but for the time being select one
 
 + Explore the myths of climate debate -> denial -> exploration
 + Explore the positive outcomes from climate action -> positive_outcomes  -> exploration
@@ -93,12 +92,13 @@ Let's explore some opinions around the climate change debate.
 = globalwarmingisnatural
     This is a bit like a murder mystery. Who are the suspects? 
     Volcanos: no evidence of any change here. We would notice. 
-    See https://www.theguardian.com/environment/2019/may/30/humans-and-volcanoes-caused-nearly-all-of-global-heating-in-past-140-years
+    See https:\/\/www.theguardian.com/environment/2019/may/30/humans-and-volcanoes-caused-nearly-all-of-global-heating-in-past-140-years
     Oceans and biosphere combusting more (maybe, but bushfires and permafrost melt seem to be driven by warming, not vice versa plus why all the warming so far when we’ve only just seen the fires pick up recently?) 
     Slowdown of sedimentary rock formation: Once again, no evidence. Ruled out plus its too damn slow to explain rapid change. 
-    See https://earthobservatory.nasa.gov/features/CarbonCycle/page2.php
+    See https:\/\/earthobservatory.nasa.gov/features/CarbonCycle/page2.php
     Sunspots / changes in solar output: We measure this and it can’t explain the level of radiative forcing and temperature change. 
-    See https://climate.nasa.gov/blog/2910/what-is-the-suns-role-in-climate-change/
+    See https:\/\/climate.nasa.gov/blog/2910/what-is-the-suns-role-in-climate-change/
+    # IMAGE:images/temperature_vs_solar.jpg
     So, if its not natural it must be us. Moving Gigatons of material around isn’t something you can do sneakily - its billions of tons. 
     # YOUTUBE:sKDWW9WlPSc
    ** Well, actually even if the warming cannot be explained by natural causes, the human impact is small, and the impact of continued greenhouse gas emissions will be minor. -> humanimpactissmall
