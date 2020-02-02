@@ -1,9 +1,14 @@
 INCLUDE functions.ink
+INCLUDE profile.ink
+INCLUDE denialmyths.ink
+INCLUDE helping.ink
+INCLUDE positives.ink
+INCLUDE consequences.ink
+
+
 # author: many people
 # title: Climate Debater
 # version: 0.01
-
-
 
 VAR GROUPA = 0  //  ~ GROUPA += 1  ~ GROUPA -= 1 
 VAR GROUPB = 0  //  ~ GROUPB += 1  ~ GROUPB -= 1 
@@ -12,160 +17,107 @@ VAR GROUPD = 0  //  ~ GROUPD += 1  ~ GROUPD -= 1
 VAR GROUPE = 0  //  ~ GROUPE += 1  ~ GROUPE -= 1 
 VAR GROUPF = 0  //  ~ GROUPF += 1  ~ GROUPF -= 1 
 
--> start -> profiling -> reachout 
+-> start
 
 === start ===
 
-Welcome to the Climage Debater v0.01. 
 
-Created over a game jam weekend, CD's aim is to transmit useful information about the climate debate.
-This software - which is open source (https://github.com/alpapan/climatedebater) - does not store or transmit any data to anyone. 
-It is created for your amusement and hopefully you will find useful information as well.
-It has no warranty or liability, implied or otherwise.
+Welcome to the Climage Debater v0.01. 
 
 During this game you will first be asked a few questions to identify your attitudes towards the debate.
 
-Then if you belong to one or two of the groups we focused during the jam, you will be able to explore different narratives and identify how you can help yourself to other information.
+Then if you belong to one of the groups we focused during the jam, you will be able to explore different narratives and find out how you can help yourself to other information.
 
-->->
+* Who created this?
+    Created by unpaid volunteers over a game jam weekend, CD's aim is to transmit useful information about the climate debate in a novel way. We declare no financial conflicts of interest.
+    ** Are you spying on me?
+        This software - which is open source - does not store or transmit any data to anyone. #SOURCE:github.com/alpapan/climatedebater
+        It has no warranty or liability, implied or otherwise.
+        It is created for your amusement and hopefully you will find useful information as well.
+    ** Let's start! -> profiling
+ * Let's start! -> profiling
+
+-
+ * Let's start! -> profiling
+
 
 === profiling
 
-* Let's start!
+We're going to show you some images.
+You may find some to be confronting, apologies but bear with us and try to choose the answer that is the closest to your initial thoughts .
 
-->greta -> bluemountainbushfire -> starvinglivestock -> activism -> coalpower
+* Ok!
+->greta -> bluemountainbushfire -> starvinglivestock -> activism -> coalpower -> exploration 
 
-+ Exit game ->->
 
-=== greta
+=== score
+
+Your (not scientific at all) score is A: {GROUPA}; B: {GROUPB}; C: {GROUPC}; D: {GROUPD}; E: {GROUPE}; F: {GROUPF}
+
+Previous research has shown that most people can be placed into certain categories based on their attitude towards the climate change debate.
+This game is taking a slightly different approach is identifying how well you belong to each of these groups:
+A: People who take positive action to reduce their envirnomental footprint.
+B: People who want change (but not ready/able to do it themselves).
+C: People who are keen to learn more about topic.
+D: People who want to maintain the status quo but may welcome government intervention.
+E: People who are - for one reason or another - disengaged from the debate and do not want to be engaged.
+F: People who are dismissive about climate change, often passionately so. This group is often keen to consider other viewpoints such as the benefits of having energy security.
+
+-> DONE
+
+=== exploration
+
 # CLEAR
-What do you think about this image?
-  #  IMAGE: images/greta.jpg
-* Role model for all kids
-  ~ GROUPA += 1
-  ~ GROUPB += 1
-  ~ GROUPE -= 1
-  ~ GROUPF -= 1
-* Snowflake
-  ~ GROUPF += 1
-  ~ GROUPA -= 1
-  ~ GROUPB -= 1
-* Who is that?
-  ~ GROUPD += 1
-  ~ GROUPE += 1
-* Rebel who should leave these things for adults
-  ~ GROUPD += 1
-* I don't know, I want to learn more
-  ~ GROUPC += 1
-  ~ GROUPE -= 1
-  ~ GROUPF -= 1
+<- score
 
-- 	->->
+This will be written based on results of previous answers but for the time being select one
+
++ {!denial.humanscanmakeit && !denial.co2risingnoimpact.done && !denial.globalwarmingisnatural.done && !denial.humanimpactissmall.done} Explore the myths of climate debate -> denial -> exploration
++ {!positive_outcomes.done} Explore the positive outcomes from climate action -> positive_outcomes  -> exploration
++ Explore how you can help yourself or people with actions -> help_people -> exploration
++ {!consequences.consider_consequences.done} Explore the likely consequences of climate heating -> consequences -> exploration
++ Play Myth or Fact! -> randommyth
+
+- -> reachout
+
+
+=== error
+
+shouldn't be here
+->END
 
 
 
 
-=== bluemountainbushfire
+=== help_people ===
+
 # CLEAR
-What do you think about this image?
- #   IMAGE: images/bmbushfire.jpg
-* Tragedy
-  ~ GROUPB += 1
-* Just another bushfire
-  ~ GROUPD += 1
-  ~ GROUPE += 1
-  ~ GROUPF += 1
-* Shameful
-  ~ GROUPA += 1
-  ~ GROUPB += 1
-* More funding for RFS
-  ~ GROUPB += 1
-  ~ GROUPD += 1
-  ~ GROUPE -= 1
-  ~ GROUPA -= 1
-* I don't know, I want to learn more
-  ~ GROUPC += 1
-  ~ GROUPE -= 1
-  ~ GROUPF -= 1
 
-- 	->->
+Yes, we're also worried about climate change.
+There seems to be so many things that we would be doing but it is all overwhelming.
+Where do we even start?
+
+* Actually, I already do quite a bit but I want to help others do it too. How can I go about that?
+-> helping_others
+
+* Yes, it's bad and I'm not sure I know which things I should focus on.
+
+-> enacting_change
+
+* I don't really feel like I can do much. It's too overwhelming and I'm just one person!
+
+-> climate_depression
 
 
-=== starvinglivestock
-# CLEAR
-What do you think about the following image?
-#   IMAGE: images/sheepgrazing.jpg
-* There goes our agriculture
-  ~ GROUPB += 1
-* Nothing money can't solve
-  ~ GROUPD += 1
-  ~ GROUPF += 1
-* What happened?!
-  ~ GROUPC += 1
-  ~ GROUPE -= 1
-  ~ GROUPF -= 1
-
-- 	->->
-
-=== activism
-# CLEAR
-What do you think about this image?
- #  IMAGE: images/activism.jpg
-* Good for them
-  ~ GROUPB += 1
-* How do I sign up?
-  ~ GROUPA += 1
-* More self promotion!
-  ~ GROUPF += 1
-* Government should pay them
-  ~ GROUPB += 1
-  ~ GROUPD += 1
-* Drop in the ocean
-  ~ GROUPE += 1
-  ~ GROUPF += 1
-* I don't know, I want to learn more
-  ~ GROUPC += 1
-  ~ GROUPE -= 1
-  ~ GROUPF -= 1
-
-- 	->->
-
-
-=== coalpower
-# CLEAR
-What do you think about this image?
-#   IMAGE: images/coalpower.jpg
-* Government should invest in renewables
-  ~ GROUPB += 1
-  ~ GROUPE -= 1
-* I will switch to green energy
-  ~ GROUPA += 1
-  ~ GROUPE -= 1
-  ~ GROUPF -= 1
-* We need cheap energy
-  ~ GROUPF += 1
-  ~ GROUPB -= 1
-  ~ GROUPC -= 1
-  ~ GROUPE -= 1
-* Expensive, polluting, but necessary right now
-  ~ GROUPC += 1
-  ~ GROUPD += 1
-  ~ GROUPE -= 1
-  ~ GROUPB -= 1
-* I don't know, I want to learn more
-  ~ GROUPC += 1
-  ~ GROUPE -= 1
-  ~ GROUPF -= 1
-
-- 	->->
 
 === reachout
 
-If you found a bug, have questions, or want to reach out:
+# CLEAR
+Thank you for trying out our game.
 
-\- Submit an Issue on GitHub (https:\/\/github.com/alpapan/climatedebater/issues)
-\- Reply to our Tweet (https:\/\/twitter.com/alpapan/status/1221999954584989697)
-\- Drop us a line (info@greenbluekats.com)
+If you found a bug, have questions, or want to reach out submit an Issue on GitHub #SOURCE:github.com/alpapan/climatedebater/issues
+
+
 
 + Conclude 
     Thank you participating in this interactive narrative.

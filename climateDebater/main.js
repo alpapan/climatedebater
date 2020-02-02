@@ -1,3 +1,16 @@
+
+var globalChoiceVariables = [0, 0, 0, 0, 0, 0]
+
+function updateChoices(story){
+  globalChoiceVariables[0] = story.variablesState.$("GROUPA");
+  globalChoiceVariables[1] = story.variablesState.$("GROUPB");
+  globalChoiceVariables[2] = story.variablesState.$("GROUPC");
+  globalChoiceVariables[3] = story.variablesState.$("GROUPD");
+  globalChoiceVariables[4] = story.variablesState.$("GROUPE");
+  globalChoiceVariables[5] = story.variablesState.$("GROUPF");
+
+}
+
 (function(storyContent) {
 
     // Create ink story from the content using inkjs
@@ -47,6 +60,33 @@
 
             // Get ink to generate the next paragraph
             var paragraphText = story.Continue();
+
+            if (paragraphText.startsWith(">>>")){
+                linkdata = paragraphText.split(':');
+                if (linkdata[0] == ">>>MYTH"){
+                  var paragraphElement = document.createElement('p');
+                  var anchorElement = document.createElement('a');
+                  console.log(linkdata[0]);
+                  console.log(linkdata[1]);
+                  console.log(linkdata[2]);
+                  anchorElement.setAttribute('href', 'https://' + linkdata[1].trim() );
+                  anchorElement.setAttribute('target', '_blank');
+                  var aText = document.createTextNode(
+                    '"' + linkdata[2].trim() + '"');
+                    var aText2 = document.createTextNode(
+                       '"' + linkdata[3].trim() + '"'
+                  );
+                  anchorElement.appendChild(aText);
+                  paragraphElement.appendChild(anchorElement);
+                  paragraphElement.appendChild(document.createElement("br"));
+                  paragraphElement.appendChild(document.createTextNode("vs:"));
+                  paragraphElement.appendChild(document.createElement("br"));
+                  paragraphElement.appendChild(aText2);
+                  storyContainer.appendChild(paragraphElement);
+                  paragraphText = "";
+                }
+            }
+
             var tags = story.currentTags;
 
             // Any special tags included with this line
@@ -63,8 +103,32 @@
                     var imageElement = document.createElement('img');
                     imageElement.src = splitTag.val;
                     storyContainer.appendChild(imageElement);
-
                     showAfter(delay, imageElement);
+                    delay += 200.0;
+                }
+
+                else if( splitTag && splitTag.property == "SOURCE" ) {
+                  var element = document.createElement('a');
+                  element.setAttribute('href', 'https://' + splitTag.val);
+                  element.setAttribute('target', '_blank');
+                  var aText = document.createTextNode("FURTHER READING");
+                  element.appendChild(aText);
+                  storyContainer.appendChild(element);
+                  showAfter(delay, element);
+                  delay += 100.0;
+                }
+
+
+                else if( splitTag && splitTag.property == "YOUTUBE" ) {
+                    var videoElement = document.createElement('iframe');
+                    videoElement.id = splitTag.val;
+                    videoElement.setAttribute("width","560");
+                    videoElement.setAttribute("height","315");
+                    videoElement.setAttribute("src","https://www.youtube-nocookie.com/embed/" + videoElement.id);
+                    videoElement.setAttribute("allow","accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture");
+                    videoElement.setAttribute("allowfullscreen",1);
+                    storyContainer.appendChild(videoElement);
+                    showAfter(delay, videoElement);
                     delay += 200.0;
                 }
 
@@ -78,7 +142,8 @@
                 else if( tag == "CLEAR" || tag == "RESTART" ) {
                     removeAll("p");
                     removeAll("img");
-
+                    removeAll("a");
+                    removeAll("iframe");
                     // Comment out this line if you want to leave the header visible when clearing
                     setVisible(".header", false);
 
@@ -136,12 +201,18 @@
                 // Remove all existing choices
                 removeAll("p.choice");
 
+                // update radar graph
+                updateChoices(story);
+
                 // Tell the story where to go next
                 story.ChooseChoiceIndex(choice.index);
 
                 // Aaand loop
                 continueStory();
             });
+
+            // pass variables from state to a global array of variables or a function or something
+
         });
 
         // shuffle the choices/children
