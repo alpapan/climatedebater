@@ -7,7 +7,6 @@ Some - thanks to recent education about healthy eating - even started to read ab
 
 = uncertainties
 
-//https://stephenschneider.stanford.edu/Climate/Climate_Impacts/WhatIsTheProbability.html
 
 When climate scientists are tasked with estimating the breadth and probability of consquences from climate change, they undertake a very rigorous scientific approach that is very different from anyone person's (even a single scientist). Scientists - like journalists - can have opinions and voice them but then there is the scientific method, which is not about opinions.
 
@@ -15,10 +14,14 @@ In the scientific method (which you don't have to be a scientist to use), people
 One tricky bit to remember is that all these models and evidence carry uncertainty with them, creating what is called the "Cascade of Uncertainties". 
 
 # IMAGE: images/RangeOfUncertainty.jpg
-(Source and read more about it here: https:\/\/stephenschneider.stanford.edu/Climate/Climate_Impacts/WhatIsTheProbability.html) 
+# SOURCE:stephenschneider.stanford.edu/Climate/Climate_Impacts/WhatIsTheProbability.html
+
+What is even more significant is that we cannot measure <i>every</i> single "thing" (variable) accurately, just like your car sensor cannot know everything about the traffic light (for example, maybe there is a car coming down the perpendicular street with no intention of stopping). We can therefore only quantify some parts of reality, the rest cannot be measured but it does not mean they are not important:
+
+# IMAGE: images/uncertainty_quantifying.jpg
 
 Politicians and policy makers dislike uncertainty because they can rarely work with (even though some government Departments such as the Treasury are well trained to create policy in spite of uncertainty and instability, many policy makers are not trained to understand it).
-This is the only reason that climate scientists have to work harder to convince policy makers that uncertainty is not something to fear. 
+This is one reason that climate scientists have to work harder to convince policy makers that uncertainty is not something to fear. 
 After all, if an engineer who inspected a residential tower she says there is a 99 % it will burst in flames and kill everyone, policy makers will not wait until it does burn to fix it, right?
 
 * I should read more uncertainty then! Why don't they teach it at school?
@@ -53,7 +56,7 @@ Now let's explore some of the consequences of climate change
   However, you are carrying the risk of not stopping exactly behind the light (depends on the quality of your brakes). Also, you will have to break hard, wasting fuel, break pads, and will have to maintain a high level of alertness for the light possibly missing other events around you. These are some of the negative consequences, but what have you gained though? 
     
 * I would not slow down, if I was "unluckly" enough to cross a red light, then others will just have to deal with the consequences.
-  This choice would certainly carry tremendous risk to not just yourself but the lives of others. Beyond the possibility of spending time in jail, hurting other people (such as killing four children https:\/\/www.theguardian.com/australia-news/2020/feb/01/four-children-die-after-allegedly-being-hit-by-car-in-sydney) is a real possibility. 
+  This choice would certainly carry tremendous risk to not just yourself but the lives of others. Beyond the possibility of spending time in jail, hurting other people (such as killing four children) is a real possibility.  #SOURCE:www.theguardian.com/australia-news/2020/feb/01/four-children-die-after-allegedly-being-hit-by-car-in-sydney
   In cases such as these, one has to ask: what is the benefit for taking such a huge risk?
  * Why are you removing the amber lights? 
     Amber lights are great and function just like the sensors, but in this example we wanted to give a % probability of the light turning red and unfortunately amber lights do not have that level of resolution! Now back to the question :-)
@@ -62,7 +65,8 @@ Now let's explore some of the consequences of climate change
 -
 Having answered this example, consider for a moment, what driving behaviour would you rather teach your teenage children as they are getting their L plates.
 
--> consider_consequences
+* I want to know more about uncertainty! -> uncertainties
+* I think I get what you mean, let's consider the consequences then! -> consider_consequences
 
 
 = consequence_one

@@ -1,12 +1,52 @@
+=== randommyth
+
+Is the first statement is true or a myth?
+// pick one randomly
+<-random_myth
+
++ It's false!
+  Yes, indeed, this statement is not true and it is has been thoroughly debunked.
+  Click on the text above to find out more.
+   <- playagain
+    -> DONE
++ It's true...
+  Actually, this statement is a common myth that has been previously shown to be false.
+  Click on the text above to find out more.
+   <- playagain
+    -> DONE
++ Nah, show me another! -> randommyth
+* Ok, let's do something else -> exploration
+
+= playagain
+
+Would you like to try another one?
++ Yes! -> randommyth
+* No, let's do something else -> exploration
+
+
 === denial
 
 Let's explore some opinions around the climate change debate. 
 
 * CO2 is not actually increasing. ->co2notrising->
 * CO2 increasing has little impact on climate -> co2risingnoimpact->
+* There is a no long term trend for increasing temperature->temperature_rising
 
 - ->->
 
+= temperature_rising
+
+One of the most common misunderstandings is the difference between short-term noise and long-term signal.
+This video shows how the same temperature data (green) that is used to determine the long-term global surface air warming trend of 0.18°C per decade (red) can be used inappropriately to "cherrypick" short time periods that show a cooling trend simply because the endpoints are carefully chosen and the trend is dominated by short-term noise in the data (blue steps).  # YOUTUBE:xWdJuNYLTLs
+
+Isn't it strange how seven periods of cooling can add up to a clear warming trend over the last 4 decades?  Several factors can have a large impact on short-term temperatures, such as oceanic cycles like the El Niño Southern Oscillation (ENSO) or the 11-year solar cycle.  
+These short-term cycles don't have long-term effects on the Earth's temperature, unlike the continuing upward trend caused by global warming from human greenhouse gas emissions.
+
+# SOURCE:skepticalscience.com/graphics.php?g=47
+The data (green) are NASA GISS monthly global surface temperature anomaly data from January 1970 through November 2016, with linear trends for the cherry picked time periods of Jan 1970–May 1977, May 1977–October 1979, October 1979–April 1988, April 1988–March 1997, March 1997–February 2002, February 2002–October 2009, and October 2009–April 2014 (blue), followed by the linear trend for the full time period (red).
+
+-
+-> denial
 
 = co2notrising
   Fringe case. 
@@ -31,12 +71,16 @@ Let's explore some opinions around the climate change debate.
 = globalwarmingisnatural
     This is a bit like a murder mystery. Who are the suspects? 
     Volcanos: no evidence of any change here. We would notice. 
-    See https:\/\/www.theguardian.com/environment/2019/may/30/humans-and-volcanoes-caused-nearly-all-of-global-heating-in-past-140-years
+    
+    # SOURCE:www.theguardian.com/environment/2019/may/30/humans-and-volcanoes-caused-nearly-all-of-global-heating-in-past-140-years
+    
     Oceans and biosphere combusting more (maybe, but bushfires and permafrost melt seem to be driven by warming, not vice versa plus why all the warming so far when we’ve only just seen the fires pick up recently?) 
     Slowdown of sedimentary rock formation: Once again, no evidence. Ruled out plus its too damn slow to explain rapid change. 
-    See https:\/\/earthobservatory.nasa.gov/features/CarbonCycle/page2.php
-    Sunspots / changes in solar output: We measure this and it can’t explain the level of radiative forcing and temperature change. 
-    See https:\/\/climate.nasa.gov/blog/2910/what-is-the-suns-role-in-climate-change/
+    
+    # SOURCE:earthobservatory.nasa.gov/features/CarbonCycle/page2.php
+
+    Sunspots / changes in solar output: We measure this and it can’t explain the level of radiative forcing and temperature change.  # SOURCE:climate.nasa.gov/blog/2910/what-is-the-suns-role-in-climate-change
+
     # IMAGE:images/temperature_vs_solar.jpg
     So, if its not natural it must be us. Moving Gigatons of material around isn’t something you can do sneakily - its billions of tons. 
     # YOUTUBE:sKDWW9WlPSc
@@ -72,6 +116,8 @@ The fix has come along. We have cheap renewables and can transition. We can affo
    ~ GROUPC += 1
    ~ GROUPD += 1
    ->  exploration
+   ** Ok, I want to read about another climate debate issue
+   -> exploration
    ** Ok, I see now
    -> exploration
   

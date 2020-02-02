@@ -60,6 +60,33 @@ function updateChoices(story){
 
             // Get ink to generate the next paragraph
             var paragraphText = story.Continue();
+
+            if (paragraphText.startsWith(">>>")){
+                linkdata = paragraphText.split(':');
+                if (linkdata[0] == ">>>MYTH"){
+                  var paragraphElement = document.createElement('p');
+                  var anchorElement = document.createElement('a');
+                  console.log(linkdata[0]);
+                  console.log(linkdata[1]);
+                  console.log(linkdata[2]);
+                  anchorElement.setAttribute('href', 'https://' + linkdata[1].trim() );
+                  anchorElement.setAttribute('target', '_blank');
+                  var aText = document.createTextNode(
+                    '"' + linkdata[2].trim() + '"');
+                    var aText2 = document.createTextNode(
+                       '"' + linkdata[3].trim() + '"'
+                  );
+                  anchorElement.appendChild(aText);
+                  paragraphElement.appendChild(anchorElement);
+                  paragraphElement.appendChild(document.createElement("br"));
+                  paragraphElement.appendChild(document.createTextNode("vs:"));
+                  paragraphElement.appendChild(document.createElement("br"));
+                  paragraphElement.appendChild(aText2);
+                  storyContainer.appendChild(paragraphElement);
+                  paragraphText = "";
+                }
+            }
+
             var tags = story.currentTags;
 
             // Any special tags included with this line
@@ -76,10 +103,21 @@ function updateChoices(story){
                     var imageElement = document.createElement('img');
                     imageElement.src = splitTag.val;
                     storyContainer.appendChild(imageElement);
-
                     showAfter(delay, imageElement);
                     delay += 200.0;
                 }
+
+                else if( splitTag && splitTag.property == "SOURCE" ) {
+                  var element = document.createElement('a');
+                  element.setAttribute('href', 'https://' + splitTag.val);
+                  element.setAttribute('target', '_blank');
+                  var aText = document.createTextNode("FURTHER READING");
+                  element.appendChild(aText);
+                  storyContainer.appendChild(element);
+                  showAfter(delay, element);
+                  delay += 100.0;
+                }
+
 
                 else if( splitTag && splitTag.property == "YOUTUBE" ) {
                     var videoElement = document.createElement('iframe');
@@ -104,7 +142,8 @@ function updateChoices(story){
                 else if( tag == "CLEAR" || tag == "RESTART" ) {
                     removeAll("p");
                     removeAll("img");
-
+                    removeAll("a");
+                    removeAll("iframe");
                     // Comment out this line if you want to leave the header visible when clearing
                     setVisible(".header", false);
 
