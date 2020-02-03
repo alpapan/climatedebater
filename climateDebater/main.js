@@ -101,6 +101,7 @@ function updateChoices(story){
                 // IMAGE: src
                 if( splitTag && splitTag.property == "IMAGE" ) {
                     var imageElement = document.createElement('img');
+                    // imageElement.src = '/themes/stressedfruitfly/assets/games/climateDebater/' + splitTag.val;
                     imageElement.src = splitTag.val;
                     storyContainer.appendChild(imageElement);
                     showAfter(delay, imageElement);

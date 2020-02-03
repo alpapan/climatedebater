@@ -16,6 +16,9 @@
 - ->->
 
 = economy
+We appreciate money to pay for life! 
+But good climate management doesn't hurt the economy, it just changes where the money is spent. Right now, there are subsidies supporting inefficient industries like coal. We can encourage green energy by removing subsidies like that, levelling the playing field.
+
 -  ->->
 
 = energy

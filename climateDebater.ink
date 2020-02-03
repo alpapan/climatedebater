@@ -6,7 +6,7 @@ INCLUDE positives.ink
 INCLUDE consequences.ink
 
 
-# author: many people
+# author: Alexie Papanicolaou, Elisa Stefaniak, Arron Flynn, Alex Turnbull, Silvarilon
 # title: Climate Debater
 # version: 0.01
 
@@ -23,6 +23,8 @@ VAR GROUPF = 0  //  ~ GROUPF += 1  ~ GROUPF -= 1
 
 
 Welcome to the Climage Debater v0.01. 
+
+It's a prototype with still much work to be done!
 
 During this game you will first be asked a few questions to identify your attitudes towards the debate.
 
@@ -68,9 +70,12 @@ F: People who are dismissive about climate change, often passionately so. This g
 === exploration
 
 # CLEAR
-<- score
+{ - !score:
+ <- score
+}
 
-This will be written based on results of previous answers but for the time being select one
+
+Explore the information about climate change:
 
 + {!denial.humanscanmakeit && !denial.co2risingnoimpact.done && !denial.globalwarmingisnatural.done && !denial.humanimpactissmall.done} Explore the myths of climate debate -> denial -> exploration
 + {!positive_outcomes.done} Explore the positive outcomes from climate action -> positive_outcomes  -> exploration
@@ -79,14 +84,6 @@ This will be written based on results of previous answers but for the time being
 + Play Myth or Fact! -> randommyth
 
 - -> reachout
-
-
-=== error
-
-shouldn't be here
-->END
-
-
 
 
 === help_people ===
@@ -101,13 +98,10 @@ Where do we even start?
 -> helping_others
 
 * Yes, it's bad and I'm not sure I know which things I should focus on.
-
 -> enacting_change
 
 * I don't really feel like I can do much. It's too overwhelming and I'm just one person!
-
 -> climate_depression
-
 
 
 === reachout
