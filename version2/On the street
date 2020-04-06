@@ -1,0 +1,21 @@
+=== Stay_on_the_street ===
+
+You watch the group of old Ladies walk off toward the town hall and begin to look around town.
+
+
+-> on_the_street
+
+
+=== on_the_street ===
+Where should you go?
+
++ Town Hall
+You head towards the large Colonial building you assume is the Town Hall
+ -> enter_town_hall
+ 
++ Head towards the GP 
+ -> head_to_the_gp
++ Go to the Hotel pub
+    -> go_to_the_pub
++ Stop by the Servo
+    -> go_to_the_Servo 

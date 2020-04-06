@@ -1,0 +1,261 @@
+=== Follow_the_old_ladies ===
+{agressive_push:
+You quickly catch up with the waddling group and the lady you pushed stops the clacking of her walker and looks at you through spectacled eyes.
+"Yes, rude one?"
+* [I don't know where to go around here and was wondering if you had any directions?]
+She looks you up and down before squeezing your cheeks.
+"You need to eat before you go anywhere dear. You come with us and eat. After bingo we'll take you where you need to go."
+    **"Oh, thank you."
+        ->enter_town_hall_with_ladies
+    **["Ahh, no thanks, not interested."]
+    The old lady shoos you off, "then fuck off then, your really are a rude one," and she points you toward the main street.
+    -> on_the_street
+    
+* [I don't know where I'm going and I was wondering if you knew where I could get some decent food to eat?]
+She looks you up and down before squeezing your cheeks.
+"Of course darling, we were about to have a great big lunch before bingo. Come on, come on the more the merrier."
+    ->enter_town_hall_with_ladies
+
+    -else: 
+You follow the old lady and join the group with her. 
+    ->enter_town_hall_with_ladies
+
+}
+
+
+===enter_town_hall_with_ladies ===
+
+{Follow_the_old_ladies: 
+-> introduce_Clare_and_Olga -> enter_town_hall
+}
+
+=== introduce_Clare_and_Olga ===
+The old lady with the stroller turns to you as she shuffles forward with her walker, "so you from the city?"
+    *"Yes I'm from the city."
+    She nods,"kinda obvious really"
+    *"No, I come from Katoomba"
+    She nods, seemingly a little more comfortable around you now.
+    *"Nah, I came from a town just like this"
+    She eyes you up and down and appears dissatisfied. "You don't look like one of us," she sighs disappointed. 
+
+    - "I'm Olga dear, pleasure to meet you."
+    One of the other ladies laughs, "don't worry about Olga she's always a little too frank for her own good." This lady is wearing a faded pink dress and has long half-moon spectacles perched on the end of a hooked nose. "I'm Clare, best stick with me or Olga will forget that you exist."
+    
+
+ -> enter_town_hall
+
+=== enter_town_hall ===
+   
+{-not the_buffet:
+   
+You enter the town hall through a stone archway past large weatherworn wooden doors. 
+
+The main hall is dominated by what honestly must be the largest game of bingo you have ever seen. There are at least two dozen tables with well over a hundred people from two generations before yours. You feel like you might be the youngest person in the room, and people seem to have noticed; you get the distinct feeling that by the end of lunch you will be the town’s collective grandchild. 
+
+-> actions_from_town_hall_entrance
+
+-else: 
+
+The town hall is empty now save for a handful of people cleaning up after the bingo.
+    *[Leave]
+    You leave and return to the main street
+    -> on_the_street
+    *[Go and speak to some of the people cleaning]
+    -> spoken_to_people_cleaning_town_hall
+    
+
+}
+=== actions_from_town_hall_entrance ===
+
+* [Examine the room]
+
+-> examine_the_main_hall
+
+* [Begin speaking with some of the crowd]
+As you wonder from table to table you being introducing yourself to a variety of people. You mostly get the standard stand-offish look wondering who the new person in town is, a couple of, "fuck-offs," but that's something that you're used to.
+There is an older fellow with worn denim jeans and an Eagles shirt who gives you a warm smile. 
+    ** ["Hello"]
+        -> met_harold
+    ** [Politetly nod and move on to the buffet]
+    -> the_buffet
+* [Head toward the food]
+-> the_buffet
+
+=== examine_the_main_hall ===
+At the front of the hall is a stage, used for a variety of town affairs aside from bingo, perhaps even the local school’s annual play you think as you notice tucked away to the side a pile of roughly sown costumes and sets painted in broad strokes of green and brown pushed against the back of the stage. At the front you see a podium with the town’s crest carved into the front, a crow turned side on upon a field of wattles with the motto ‘felicitatem & civitas.'
+That podium is where, you imagine, you will have to speak from this weekend to what you hope will be a crowd as large as this.
+-> actions_from_town_hall_entrance
+
+=== met_harold ===
+
+    "How you doin' boss." The man replies. He seems very charming and welcoming. "The name's Harold, you like a bit like a fish out of water." 
+        * "Just a little[."]," you reply.
+        "Ahhh you'll be right," he chuckles, "listen come stop by the Crown and Oak just round the corner tonight. We'll set you up with some grub and a room if you need it. I'm the owner, if I'm not there when you arrive just tell Jimmy I sent you."
+        * "This isn't anything that I'm not used to."
+        "Ha' a fiery one. You'll fit right in. Stop by the pub tonight if you need some food or board and I'll set you up." 
+        - You hear the ringing of a bell and Harold hops up from his seat and gives you a wink, "speaking of grub Imma get some," as he heads towards the buffet.
+        ->actions_from_town_hall_entrance
+
+ 
+=== the_buffet ===
+ On the right-hand side of the hall is one of the largest buffets you’ve ever seen. You wince as you look across and see piles of roast lamb, beef, chicken and what you presume is some kind of baked fish in a tin foil. There is a small serving of roast vegtables.
+ {-introduce_Clare_and_Olga:
+ Olga grabs you with a surprisingly iron-like grip and shouts above the din, “what are you eating darling!?”
+ * [Lamb]
+ She nods and piles the lamb on your plate. 
+ -> choose_a_seat
+ * [Beef]
+  She nods and piles the beef on your plate. 
+   -> choose_a_seat
+ * [Chicken]
+  She nods and piles the chicken on your plate. 
+   -> choose_a_seat
+ * [Fish]
+  She gives you a look that seems to ask, 'are you sure?' before she shrugs and delicately places a segment of the fish on your plate, before handing gingerly to you, as if it were some kind of radioactive material. 
+   -> choose_a_seat
+ * [Roast vegtables]
+ Glancing over the smorgasbord you hesitate, watching everyone else pile meat onto their plates, "ahh, roast vegetables please."
+    "What?!" Olga cries. 
+    ** [You think she must not have heard you,] "ROAST VEGETABLES PLEASE!"
+    “I’M NOT DEAF DARLING!” She chuckles, “I mean what meat?”
+        *** "I'm a vegetarian."
+        ~ character_is_vegetarian = true 
+        -> character_is_a_vegetarian
+
+
+        *** "I'm just not that hungry."
+                Olga looks at you quizzically but shrugs and hands you a plat of roast veggies. "Whatever you want dearie." 
+                -> choose_a_seat
+        *** "I just don't feel like meat right now."
+                Olga looks at you quizzically but shrugs and hands you a plat of roast veggies. "Whatever you want dearie." 
+                -> choose_a_seat
+        
+    ** [Shrug and just serve yourself]
+    You shrug dejectedly not feeling like repeating yourself and just start serving your own food. In your peripheral vision on so Olga frown and shake her head at you, as though you just committed some terribly rude act. 
+    ~olga_opinion--
+     -> choose_a_seat
+ 
+ -else: 
+ You approach and look try to decide what to eat.
+  * [Lamb]
+   -> choose_a_seat
+ * [Beef] 
+  -> choose_a_seat
+ * [Chicken]
+  -> choose_a_seat
+ * [Fish]
+  -> choose_a_seat
+ * [Roast vegtables]
+  -> choose_a_seat
+}
+
+
+=== character_is_a_vegetarian ===
+
+        You can feel that conversation in the groups around you have slowed and the people are eavesdropping in to see who this strange new person is. 
+        Her right eyebrow shoots up, “Why on earth would you be a vegetarian?”
+            **** "Because the meat industry is cruel and barbaric."
+            You begin your tirade of allegations against the inhumane treatment of animals, how meat is not necessary and just causes animal suffering and damages the planet and the environment. 
+            But, as you speak you see people turn away and stop listening, a couple even tell you to, "fuck off...no one asked you." 
+            ~olga_opinion -- 
+            ~town_sympathy = town_sympathy - 3
+                *****[Find a seat]
+                    ->choose_a_seat
+                *****[Leave the Town hall]
+                Frustrated with the townsfolk and the fact that they wouldn't listen you storm out of the hall and back to the street. 
+                -> on_the_street
+            **** [Tell a story to try to gain sympathy]
+            -> jenny_the_cow -> choose_a_seat
+            
+            
+=== jenny_the_cow ===
+            When I was young my uncle had a farm up on the north coast. He kept some cows for milk and competition, and when I was five he let me pick one, and every summer my family would visit and I would help look after that cow. I named it Jenny.” 
+            You can hear some mutters and chuckles from the older folks who must have been farmers in the local area, “never name em’.”
+                * [You nod at them, "Exactly like you're thinking."]
+                * [Continue your story]
+                - "Jenny was a male, didn’t stop me from calling him Jenny, and he was the sweetest and friendliest cow. He used to love this one particular post in the field that he would use to scratch his head and back on. I was a city kid so I didn’t know that cows got itchy like us, and loved to scratch themselves.”
+                You hear a couple of 'awwwws' from some of the older ladies. 
+                * "One summer when I was ten[..."] we went up
+                * "When I was older we visited the farm[..."]
+                - and Jenny wasn’t there anymore. I kept asking and asking where Jenny was. But my uncle kept saying well, he’d show up. Then at dinner he did. Ever since I haven’t really been able to eat meat.”
+                “AH, you’re a big ol’ softie.” Laughed Olga, “ a real sensitive one ain’t ya. Alright, veggies for the young un'.” 
+                ~ olga_opinion = olga_opinion + 2 
+                The group chuckles and goes about their conversation. You hear a few people chuckle about city folks.
+                * You smile politely at them when when they glance your way. 
+                ~ town_sympathy++
+                * "Well," you say, "half city-folk." 
+                Some of them look back and scoff, others give a mild nod of approval.
+                ~ town_sympathy++
+                - Everyone begins to collect their food and move to their tables to eat and talk. 
+                * [Look around for Carol.]
+                You look back to the buffet table and notice Carol begins to put some roast beef on her plate, before looking at it and putting it back. Instead she heaps vegetables on her plate as well. 
+                She notices you watching her and shrugs, “I had a Jenny as well, his name was Steve though, sometimes I remember and I don’t really want meat either.”
+                You smile, glad you seem to have made a little progess in changing at least one attitude here already.
+                ~ carol_opinion = carol_opinion + 3 
+                    ->->
+
+                * [Go and look for a seat.]
+                ->->
+
+=== choose_a_seat ===
+As you walk away from the buffet paper plate in hand you look around at all the tables and decide where to sit. 
+* {enter_town_hall_with_ladies} [Sit with Olga and Carol]
+-> eat_lunch_with_Carol_and_Olga
+* {met_harold} [Sit with Harold]
+-> eat_lunch_with_Harol
+* [Sit at the nearest empty seat]
+-> eat_lunch
+
+=== eat_lunch_with_Carol_and_Olga ===
+You join the ladies and sit at their table, the conversation is excied and gossipy. 
+* [Eavesdrop] 
+-> eavesdrop
+* [Join in]
+You start talking with Carol and Olga and they quickly abandon whatever they were talking about before you interrupted. But, as you ask questions they quickly start talking about the town history and their own lives, reveling in a new listener to hear their stories. 
+~carol_opinion++
+~olga_opinion++
+-> lunch_concludes
+* [Focus on your eating lunch]
+You quietly sit and enjoy your meal, its nicer than you were expecting and you wonder who made the food.
+-> lunch_concludes
+
+
+=== eavesdrop ===
+You listen as they all begin chattering. 
+Olga looks around clandestinely before spouting off, "Listen, I know it, right, Tom is cheating ever single time. I don't know how he's doing it but he's friends with that wanker Roger and they're cheating at every single one of these events."
+Carol sighs, "don't be ridiculous, Tom is so lovely he'd never cheat."
+"Of course he would," Olga snaps back, "I remember him, he used to come into the store and slip Mars bars into his pants."
+"You don't know that, you never caught him." 
+    **Continue listening.
+"I do know that, no one else around here really eats em' and there was missing stock and he would stop by everyday when he was a kid and he'd only buy them once a week, but we were missing 4 every single week." 
+Carol begins to open her mouth, but notices you listening and gives a meaningful look to Olga.
+~carol_opinion--
+~olga_opinion--
+-> lunch_concludes
+    **Stop eavesdropping.
+    You realise that it might be rude to listen into this conversation and return to your food.
+-> lunch_concludes
+
+
+=== eat_lunch ===
+As you wander between the full tables of boisterous conversations with accusations about decade old grievances being thrown left and right, you begin to notice that there are many different cliques in Crowshurst. You finally find an empty seat next to a man in his late 50s wearing tweed with leather elbows like so many cartoon images of old timey professors. 
+* Eat your lunch in peace and quiet.
+-> lunch_concludes
+* Introduce yourself to the man next to you. 
+As you begin to eat you turn and introduce yourself to the man. 
+He nods politely before continuing to eat his meal. 
+    ** [Take the hint]
+    You take the hint and focus on eating your food, leaving the man in peace. 
+    -> lunch_concludes
+    **" What's your name?" you ask.
+    -> met_tom
+    
+=== met_tom ===
+He signs deeply, "and here I thought I'd be able to have a lunch in peace and quiet." He looks into your insistent eyes and seems to realise that he's not getting out of this.
+"My name is Tom, I wish I could say it was a pleasure to meet you, but it really isn't"
+~tom_opinion--
+*"Dito[."]," you reply. Despite himself you swear you can hear him chuckle a little at your response before you both finsih your lunch in peace. 
+~tom_opinion = tom_opinion + 2 
+-> lunch_concludes
+* "Sorry I'll leave you alone then[."]," you say slightly offended before returning to your food.
+-> lunch_concludes

@@ -1,0 +1,56 @@
+=== lunch_concludes ===
+As lunch concludes plastic forks clatter against plastic knives amidst the dull rustle of the collecting of paper plates and slow shuffle toward the bin. You notice there is only one bin near the buffet where everyone is headed, made of old black plastic with a dull green lid. 
+* [Join in with everyone putting their rubbish in the same bin.]
+You walk over and place your rubbish in the bin that is already overflowing with paper plates, plastic cutlery and the occacional piece of uneaten food, before returning to your chair.
+-> wait_for_bingo_to_start
+*[Look around for a recyling bin.]
+You glance toward the entrance and see a recycling bin propping up the door. 
+    **[Don't bother and place your rubbish in the same bin as everyone else.]
+    You walk over and place your rubbish in the bin that is already overflowing with paper plates, plastic cutlery and the occasional piece of uneaten food, before returning to your chair. 
+    -> wait_for_bingo_to_start
+    **[Take your rubbish to the recycling bin.]
+    You walk to the entrance of the town hall and place your rubbish in the recycling bin. You look back at the other bin and see that it’s almost overflowing. 
+        ***[Move the recycling bin to next to the garbage bin.]
+        You begin wheeling the bin towards the garbage bin but as you do you front door, without a prop to hold it up, begins to swing shut. 
+        People from the town are now looking at you and a couple shout out,"Oi, the fuck you think you're doing... Leave it there so the fucking air can get through!"
+            ****[Ignore them and continue moving the bin.]
+            You block out their complaints as you roll the bin across the room, and place it in front of the garbage bin. 
+            You head back to your seat trying to ignore the death stares people are giving you.
+            ~town_sympathy--
+            -> wait_for_bingo_to_start
+            ****[Look around for something to prop the door with.]
+            As you look around there is nothing nearby to prop the door open with. 
+                *****[Use your satchel bag]
+                You take off your satchel bag and use it to prop up the door.
+                ~character_has_satchel = false
+                People look grateful as you wheel the bin over and place it next to the garbage bin. As you return to your seat you see that the recycling bin is being filled quickly. 
+                ~town_sympathy++
+                {
+                -carol_opinion > 0: 
+                As you sit there is a light tap on your shoulder. You turn and Carol is standing there with your satchel bag in hand, you lean over and look at the door to see its propped up with a chair. "Hear you go dear," she says before returning to her seat.
+                ~character_has_satchel= true
+                -> wait_for_bingo_to_start
+                -harold_opinion> 3: 
+                As you sit there is a light tap on your shoulder. You turn and Harold is standing there with your satchel bag in hand, you lean over and look at the door to see its propped up with a chair. "There you go champ," he says before returning to his seat.
+                ~character_has_satchel= true
+                -> wait_for_bingo_to_start
+                -else:
+                You sit down before remembering your satchel bag, you look around the hall for a bit before finding a spare chair to prop up the door with and retrieve your bag. 
+                ~character_has_satchel= true
+                -> wait_for_bingo_to_start
+                }
+                *****[Give up and leave the recycling bin behind]
+                You sigh and leave the bin behind and return to your seat.
+                -> wait_for_bingo_to_start
+                *****[Ignore the door and take the recycling bin anyway]
+                You block out their complaints as you roll the bin across the room, and place it in front of the garbage bin. 
+            You head back to your seat trying to ignore the death stares people are giving you.
+            -> wait_for_bingo_to_start
+        ***[Head back to your seat]
+        -> wait_for_bingo_to_start
+        
+        
+=== wait_for_bingo_to_start ===
+As you sit and wait for the bingo to start you realise that you are out of time and so is this demo. A  developer appears and pulls out a sign that reads...
+-> DONE
+

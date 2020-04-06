@@ -1,0 +1,111 @@
+=== eat_lunch_with_Harol ===
+As you reach Harold’s table you notice that he hasn’t put any meat on his plate at all. 
+    {character_is_a_vegetarian: 
+-> veggie_conversation_with_harold
+    -else:
+    *"Are you a vegetarian?" you ask.
+    He eyes you with caution, as though he's gone through this line of questioning alot. 
+    "Yeah," he says, "why do you ask?"
+        **No reason
+        -> harold_lunch_conclusion
+        **I think that its really good that your vegetarian.
+        He raises an eyebrow, "oh yeah, why's that?"
+        -> convincing_harold_veggie_benifits -> harold_lunch_conclusion
+        **Mind if I ask why?
+        -> harold_veggie_reason
+            ***"I'm sorry to hear that"
+            "Thank you," he replies. 
+            ~ harold_opinion++
+            ->harold_lunch_conclusion
+            ***Nod silently
+            ->harold_lunch_conclusion
+    * Don't make a comment and eat lunch quietly. 
+    -> harold_lunch_conclusion
+    
+    }
+    
+    
+=== veggie_conversation_with_harold ===
+
+    He looks over as you sit and place your own plate heaped with veggies on the table. He smiles a brilliant smile. 
+    "Are you a veggie too?" he asks. 
+    * "Yeah, I am"
+    
+    * "Like I was telling everyone at the buffet, yep, have been since I was young."
+    "Oh, I didn't hear any of that." 
+    
+    -His smile stretches wider than any you've ever seen. 
+        "I thought I'd die before I saw another vegetarian out here. Why are you one, if you don't mind my asking?"
+        
+    *[Can't stand the taste of meat.]
+    He nods, a little surprised. "That's fair enough. Whatever the reason I'm glad someone else here is a part of the plant clan." He slaps you jovially on the back and starts digging into the roast pumpkin in front of him. 
+    ~harold_opinion = harold_opinion + 5
+                ->harold_lunch_conclusion
+    *{jenny_the_cow}[Recount the Jenny story to him.]
+    He smiles, "ah, another softie huh? have you met Carol yet?"
+        ** You nod her head in affirmation. 
+        "That's good the two of you will get along swimmingly, she's got a story a lot like yours." 
+            ~harold_opinion = harold_opinion + 5
+                        ->harold_lunch_conclusion
+        ** You lie and say you haven't.
+        "Well then you have to meet her, she works out of the schoolhouse most days, you should drop by some time and say hello."
+            ~harold_opinion = harold_opinion + 5
+                        ->harold_lunch_conclusion
+    *["Meat is murder!"]
+        He frows a bit, seemingly taken back by your enthusiasm. "Ah, yeah...I guess it is." 
+        He then quietly settles down to eat his own vegetables, seemingly uninterested in further conversation. 
+        ~harold_opinion--
+                    ->harold_lunch_conclusion
+    *[For the benifit of the environemnt.]
+        -> convincing_harold_veggie_benifits -> harold_lunch_conclusion
+
+    *[Dietary concerns.]
+        Harold looks at you with sympathy in his eyes, "that's rough buddy," he says. "I'm much the same," He sighs.
+            ~harold_opinion = harold_opinion + 5
+    -> harold_veggie_reason    -> harold_lunch_conclusion_cont
+
+
+=== convincing_harold_veggie_benifits ===
+    He frowns lightly, seemingly curious. "I never thought of it that way. How so?" 
+        *[Approach the topic lightly]
+        You simply explain that it's an easy way to reduce carbon emissions.
+        "Huh. Well, the more you know."
+        ~harold_opinion = harold_opinion + 5
+        *[Go hard with the facts, hit him with the truth]
+        You start going off about the amount of water it takes to raise a single chicken, and the extraordinary amount of food it takes to make meat, which would be more than enough for use instead, several times over in fact. 
+        You see his face dull and the smile fade, as you lose him in the wave of your enthusiasm. Overwhelmed he simply says, "Oh, right," and turns back to his plate of veggies seemingly uninterested in further conversation. 
+            ~harold_opinion--
+        - ->->
+        
+=== harold_veggie_reason ===
+
+    "When I was young I ate too much of the stuff and got on the sauce a little too often, as a result the doc told me I should keep off the stuff for my own health. I got a wife and kids and I wanna be around to see them grow up, so I cut it all out and started eating better." He smiles. "Still miss it sometimes thought."
+    ->->
+
+    
+=== harold_lunch_conclusion ===
+{
+-harold_opinion > 0 && not harold_veggie_reason:
+* [You smile and quietly eat your meal]
+-> harold_lunch_conclusion_cont
+* [Ask why he is a vegetarian]
+"So why are you a vegetarian," you ask. 
+"Me?" he says. 
+-> harold_veggie_reason    -> harold_lunch_conclusion_cont
+
+-harold_opinion >0 && harold_veggie_reason:
+-> harold_lunch_conclusion_cont
+
+-harold_opinion == 0: 
+The rest of lunch is passed in a peaceful enough silence. 
+
+-else:
+The rest of lunch is passed in an awkward silence. 
+-> lunch_concludes
+}
+
+=== harold_lunch_conclusion_cont ===
+You and Harold pass the rest of lunch in amicable conversation, enjoying the roast veggies that he tells you he made, even offering to give you the recipie that contains his secret ingredient later.
+
+-> lunch_concludes
+
