@@ -34,13 +34,15 @@ The old lady with the stroller turns to you as she shuffles forward with her wal
     *"Yes I'm from the city."
     She nods,"kinda obvious really"
     *"No, I come from Katoomba"
-    She nods, seemingly a little more comfortable around you now.
+    She nods, and some tension her gaze eases, seemingly a little more comfortable around you now.
+    ~olga_opinion++
     *"Nah, I came from a town just like this"
     She eyes you up and down and appears dissatisfied. "You don't look like one of us," she sighs disappointed. 
+    ~olga_opinion--
 
     - "I'm Olga dear, pleasure to meet you."
     One of the other ladies laughs, "don't worry about Olga she's always a little too frank for her own good." This lady is wearing a faded pink dress and has long half-moon spectacles perched on the end of a hooked nose. "I'm Clare, best stick with me or Olga will forget that you exist."
-    
+        
 
  -> enter_town_hall
 
@@ -238,7 +240,7 @@ Carol begins to open her mouth, but notices you listening and gives a meaningful
 
 
 === eat_lunch ===
-As you wander between the full tables of boisterous conversations with accusations about decade old grievances being thrown left and right, you begin to notice that there are many different cliques in Crowshurst. You finally find an empty seat next to a man in his late 50s wearing tweed with leather elbows like so many cartoon images of old timey professors. 
+As you wander between the full tables of boisterous conversations with accusations about decade old grievances being thrown left and right, you begin to notice that there are many different cliques in Crowshurst. You finally find an empty seat next to a man in his late 50s wearing tweed jacket with leather elbows like so many cartoon images of old timey professors. 
 * Eat your lunch in peace and quiet.
 -> lunch_concludes
 * Introduce yourself to the man next to you. 

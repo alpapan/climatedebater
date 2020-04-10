@@ -49,8 +49,5 @@ You glance toward the entrance and see a recycling bin propping up the door.
         ***[Head back to your seat]
         -> wait_for_bingo_to_start
         
-        
-=== wait_for_bingo_to_start ===
-As you sit and wait for the bingo to start you realise that you are out of time and so is this demo. A  developer appears and pulls out a sign that reads...
--> DONE
+
 

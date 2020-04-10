@@ -1,6 +1,7 @@
 === eat_lunch_with_Harol ===
 As you reach Harold’s table you notice that he hasn’t put any meat on his plate at all. 
-    {character_is_a_vegetarian: 
+    {
+    -character_is_a_vegetarian: 
 -> veggie_conversation_with_harold
     -else:
     *"Are you a vegetarian?" you ask.

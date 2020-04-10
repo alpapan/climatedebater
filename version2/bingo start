@@ -1,0 +1,70 @@
+=== wait_for_bingo_to_start ===
+With lunch done everyone is gathered at tables sipping tea or coffee, the kind that town halls often have: from the big thermos of boiling water that you draw from like a water cooler, to the identical white china coffee cups and the universal unbranded sachets of coffee. You smile and reflect gladly that at least they’re using china cups rather than plastic. Through the front entrance strolls what looks like the closest human representation of the monopoly man you’ve ever seen, but instead of a suit he is wearing khaki shorts and a shirt with the Roger & Sons insignia woven onto it. As he walks past groups of people he stops and speaks with them.
+
+    * [Listen in]
+    You listen as he stops at a nearby table and shakes each person's hand giving them a warm and friendly greeting. Plesentries are passed but nothing of import is said. 
+    {
+    -met_tom:
+    The man heads toward the table you are sitting at and approaches Tom. He smiles boradly as Tom rises out of his seat and gives him a hug. 
+    "Roger, good to see you, how's the missues and the kids."
+    'ROGER!?' you think to yourself, this is the man in charge of the logging company?
+    "The missues is good, and the boys are here today, you can ask them yourself," Roger chuckles, before leaning in to speak quietly to Tom. 
+        **[evesdrop]
+        You try to hear the whispered conversation above the hubub of the hall but can only make out a few words. 
+        "Remember...bumps...two to Jonathan."
+        Tom nods, and looks up to see you watching and frowns angrily. 
+        ~tom_opinion--
+        -> bingo_starts
+        **[keep to yourself]
+        You decide its best to not be too much of a stickybeak and keep to yourself, wondering why Roger is here.
+        -> bingo_starts
+        -eat_lunch && not met_tom:
+    The man heads toward the table you are sitting at and approaches the man in the tweed jacket. Roger smiles boradly as the man rises out of his seat and gives him a hug. 
+    The man in the tweed jacket smiles, "Roger, good to see you, how's the missues and the kids."
+    'ROGER!?' you think to yourself, this is the man in charge of the logging company?
+    "The missues is good, and the boys are here today, you can ask them yourself Tom," Roger chuckles, before leaning in to speak quietly to Tom. 
+        **[evesdrop]
+        You try to hear the whispered conversation above the hubub of the hall but can only make out a few words. 
+        "Remember...bumps...two to Jonathan."
+        // TO DO VAR change or make a knot for testing
+        Tom nods, and looks up to see you watching and frowns angrily. 
+        ~tom_opinion--
+        -> bingo_starts
+        **[keep to yourself]
+        You decide its best to not be too much of a stickybeak and keep to yourself, wondering why Roger is here.
+        -> bingo_starts
+        -else:
+        The man heads towards another table and approaches a man in a tweed jacket. They hug and laugh together before having a quiet conversation that you are too far away to hear any of. 
+        As the man in khaki walks away the man it tweed calls out after him, "Roger, are the boys here today?"
+        "Ay, they'll pop around and say hi at some stage."
+        'ROGER?!' you think to yourself, 'what's he doing here?'
+    }
+    * [Don't listen in, it would be rude to evesedrop]
+    {
+    -eat_lunch_with_Carol_and_Olga:
+    As you wait you see Carol watching the man in khaki walking though the hall as though watching a rabid dog walking through the street.
+        **[Ask why she's glaring at the man.]
+        She looks at you suprised, as if she forgot that you were there. "Sorry dear," she says, "that man, Roger, and I have some history."
+        Olga scoffs, "ha that's one way to put it, right bastard that man."
+        You look at him. That's Roger? you think to yourelf, what's he doing here?
+         ->bingo_starts
+        **[Leave it alone, not your bussiness.]
+        You see Olga gently place her hand on Carol's shoulder, "It's alright dear, we can leave if you like?"
+        Carol grimaces, "no, I can't spend the rest of my life running away from Roger."
+        You look at the man walking though the hall, that's Roger? what's he doing here? you wonder. 
+     ->bingo_starts
+    -eat_lunch_with_Harol:
+    Harlod glares agrily at the man walking across the hall. "That bastard Roger always struting around like he owns the place.
+     ->bingo_starts
+    -else:
+            The man heads towards another table and approaches a man in a tweed jacket. They hug and laugh together before having a quiet conversation that you are too far away to hear any of. 
+        As the man in khaki walks away the man it tweed calls out after him, "Roger, are the boys here today?"
+        "Ay, they'll pop around and say hi at some stage."
+        'ROGER?!' you think to yourself, 'what's he doing here?'
+     ->bingo_starts
+    }
+    
+=== bingo_starts ===
+
+that's it, a develper appears on the stage and holds up a sign that says...
+->DONE

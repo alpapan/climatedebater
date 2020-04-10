@@ -6,6 +6,8 @@ INCLUDE Pub
 INCLUDE Cleaners at Town Hall
 INCLUDE Harold Lunch
 INCLUDE lunch concludes
+INCLUDE bingo start
+
 
 
 
@@ -255,7 +257,7 @@ The bus rattles and shudders as it tumbles along the dusty east road. The storm 
             
         - else: 
         As the bus pulls away you hear a croak from behind you. 
-        "Hmmm, not many people polite enough to wait these days." You see an old lady behind her never-polished walker looking at you curiously. 
+        "Hmmm, not many people polite enough to wait these days." You see an old lady behind her walker looking at you curiously. 
         "You ain't from here eh"
         *"No I'm not, and I really have no idea where to go."[]
         She smiles in a grandmotherly way and beckons to you to follow her as she walks to a group of gathering old women near by.
