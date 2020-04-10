@@ -1,3 +1,15 @@
+var globalChoiceVariables = [0, 0, 0, 0, 0, 0]
+
+function updateChoices(story){
+  globalChoiceVariables[0] = story.variablesState.$("GROUPA");
+  globalChoiceVariables[1] = story.variablesState.$("GROUPB");
+  globalChoiceVariables[2] = story.variablesState.$("GROUPC");
+  globalChoiceVariables[3] = story.variablesState.$("GROUPD");
+  globalChoiceVariables[4] = story.variablesState.$("GROUPE");
+  globalChoiceVariables[5] = story.variablesState.$("GROUPF");
+
+}
+
 (function(storyContent) {
 
     // Create ink story from the content using inkjs
@@ -12,12 +24,12 @@
         for(var i=0; i<story.globalTags.length; i++) {
             var globalTag = story.globalTags[i];
             var splitTag = splitPropertyTag(globalTag);
-            
+
             // THEME: dark
             if( splitTag && splitTag.property == "theme" ) {
                 document.body.classList.add(splitTag.val);
             }
-            
+
             // author: Your Name
             else if( splitTag && splitTag.property == "author" ) {
                 var byline = document.querySelector('.byline');
@@ -38,7 +50,7 @@
 
         var paragraphIndex = 0;
         var delay = 0.0;
-        
+
         // Don't over-scroll past new content
         var previousBottomEdge = firstTime ? 0 : contentBottomEdgeY();
 
@@ -47,8 +59,35 @@
 
             // Get ink to generate the next paragraph
             var paragraphText = story.Continue();
+
+            if (paragraphText.startsWith(">>>")){
+                linkdata = paragraphText.split(':');
+                if (linkdata[0] == ">>>MYTH"){
+                  var paragraphElement = document.createElement('p');
+                  var anchorElement = document.createElement('a');
+                  console.log(linkdata[0]);
+                  console.log(linkdata[1]);
+                  console.log(linkdata[2]);
+                  anchorElement.setAttribute('href', 'https://' + linkdata[1].trim() );
+                  anchorElement.setAttribute('target', '_blank');
+                  var aText = document.createTextNode(
+                    '"' + linkdata[2].trim() + '"');
+                    var aText2 = document.createTextNode(
+                       '"' + linkdata[3].trim() + '"'
+                  );
+                  anchorElement.appendChild(aText);
+                  paragraphElement.appendChild(anchorElement);
+                  paragraphElement.appendChild(document.createElement("br"));
+                  paragraphElement.appendChild(document.createTextNode("vs:"));
+                  paragraphElement.appendChild(document.createElement("br"));
+                  paragraphElement.appendChild(aText2);
+                  storyContainer.appendChild(paragraphElement);
+                  paragraphText = "";
+                }
+            }
+
             var tags = story.currentTags;
-            
+
             // Any special tags included with this line
             var customClasses = [];
             for(var i=0; i<tags.length; i++) {
@@ -61,10 +100,35 @@
                 // IMAGE: src
                 if( splitTag && splitTag.property == "IMAGE" ) {
                     var imageElement = document.createElement('img');
-                    imageElement.src = splitTag.val;
+                    imageElement.src = '/themes/stressedfruitfly/assets/games/climateDebater/' + splitTag.val;
+                    //imageElement.src = splitTag.val;
                     storyContainer.appendChild(imageElement);
-
                     showAfter(delay, imageElement);
+                    delay += 200.0;
+                }
+
+                else if( splitTag && splitTag.property == "SOURCE" ) {
+                  var element = document.createElement('a');
+                  element.setAttribute('href', 'https://' + splitTag.val);
+                  element.setAttribute('target', '_blank');
+                  var aText = document.createTextNode("FURTHER READING");
+                  element.appendChild(aText);
+                  storyContainer.appendChild(element);
+                  showAfter(delay, element);
+                  delay += 100.0;
+                }
+
+
+                else if( splitTag && splitTag.property == "YOUTUBE" ) {
+                    var videoElement = document.createElement('iframe');
+                    videoElement.id = splitTag.val;
+                    videoElement.setAttribute("width","560");
+                    videoElement.setAttribute("height","315");
+                    videoElement.setAttribute("src","https://www.youtube-nocookie.com/embed/" + videoElement.id);
+                    videoElement.setAttribute("allow","accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture");
+                    videoElement.setAttribute("allowfullscreen",1);
+                    storyContainer.appendChild(videoElement);
+                    showAfter(delay, videoElement);
                     delay += 200.0;
                 }
 
@@ -78,7 +142,8 @@
                 else if( tag == "CLEAR" || tag == "RESTART" ) {
                     removeAll("p");
                     removeAll("img");
-                    
+                    removeAll("a");
+                    removeAll("iframe");
                     // Comment out this line if you want to leave the header visible when clearing
                     setVisible(".header", false);
 
@@ -93,7 +158,7 @@
             var paragraphElement = document.createElement('p');
             paragraphElement.innerHTML = paragraphText;
             storyContainer.appendChild(paragraphElement);
-            
+
             // Add any custom classes derived from ink tags
             for(var i=0; i<customClasses.length; i++)
                 paragraphElement.classList.add(customClasses[i]);
@@ -104,7 +169,17 @@
         }
 
         // Create HTML choices from ink choices
-        story.currentChoices.forEach(function(choice) {
+        currentChoices_random = story.currentChoices;
+
+        for(var i = currentChoices_random.length - 1; i > 0; i--){
+            const j = Math.floor(Math.random() * i)
+            const temp = currentChoices_random[i]
+            currentChoices_random[i] = currentChoices_random[j]
+            currentChoices_random[j] = temp
+        }
+
+        currentChoices_random.forEach(function(choice) {
+        //story.currentChoices.forEach(function(choice) {
 
             // Create paragraph with anchor element
             var choiceParagraphElement = document.createElement('p');
@@ -126,13 +201,25 @@
                 // Remove all existing choices
                 removeAll("p.choice");
 
+                // update radar graph
+                updateChoices(story);
+
                 // Tell the story where to go next
                 story.ChooseChoiceIndex(choice.index);
 
                 // Aaand loop
                 continueStory();
             });
+
+            // pass variables from state to a global array of variables or a function or something
+
         });
+
+        // shuffle the choices/children
+        //choices = $(".choice show").children;
+        //choices = shuffle(choices);
+        //removeAll("p.choice");
+        //.choices.forEach(element => $(".choice show").appendChild(choice));
 
         // Extend height to fit
         // We do this manually so that removing elements and creating new ones doesn't
@@ -169,7 +256,7 @@
 
         // Line up top of screen with the bottom of where the previous content ended
         var target = previousBottomEdge;
-        
+
         // Can't go further than the very bottom of the page
         var limit = outerScrollContainer.scrollHeight - outerScrollContainer.clientHeight;
         if( target > limit ) target = limit;
@@ -188,6 +275,7 @@
         }
         requestAnimationFrame(step);
     }
+
 
     // The Y coordinate of the bottom end of all the story content, used
     // for growing the container, and deciding how far to scroll.
@@ -227,7 +315,7 @@
         var propertySplitIdx = tag.indexOf(":");
         if( propertySplitIdx != null ) {
             var property = tag.substr(0, propertySplitIdx).trim();
-            var val = tag.substr(propertySplitIdx+1).trim(); 
+            var val = tag.substr(propertySplitIdx+1).trim();
             return {
                 property: property,
                 val: val
