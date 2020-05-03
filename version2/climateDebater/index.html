@@ -1,50 +1,80 @@
 ﻿<!doctype html>
 <html lang="en">
+
 <head>
-    <meta charset="utf-8">
-
-    <title>Climate Debater</title>
-
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <link rel="stylesheet" href="style_alt_1.css">
-
+  <meta charset="utf-8">
+  <!--Let browser know website is optimized for mobile-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="static/css/style_alt_1.css">
+  <title>Climate Debater</title>
 </head>
 
 <body>
 
-    <div class="outerContainer">
-        <div id="story" class="container">
-            <div class="header">
-                <h1>Climate Debater</h1>
-                <h2 class="byline"></h2>
+  <div class="container">
+
+    <!-- Navigation bar (including Rucksack)-->
+    <nav class="navbar navbar-expand-lg bg-light sticky-top">
+      <a class="navbar-brand">Climate Debater</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav w-100">
+          <li class="nav-item dropdown ml-auto mr-1">
+            <img src="static/img/backpack.svg" class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink"
+              data-toggle="dropdown" alt="My Backpack" width="70">
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item" href="#" data-toggle="modal" data-target="#staticBackdrop">Map</a>
+              <a class="dropdown-item" href="#">Other</a>
             </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Map Popup -->
+    <div class="modal fade" id="staticBackdrop" data-backdrop="static" tabindex="-1" role="dialog"
+      aria-labelledby="staticBackdropLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="staticBackdropLabel">Map</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body text-center">
+            <canvas id="mapCanvas" width="700" height="450"></canvas>
+          </div>
+        </div>
       </div>
     </div>
 
+    <div id="story" class="container"></div>
 
-    <!-- 
-    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
-    <script crossorigin src="https://unpkg.com/react@16/umd/react.production.min.js" ></script>
-    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js" ></script>
-    <script src="https://unpkg.com/prop-types/prop-types.min.js"></script>
-    <script src="https://unpkg.com/recharts/umd/Recharts.min.js"></script>
+  </div>
 
-     <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
-    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
-    <script crossorigin src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-    <script crossorigin src="https://unpkg.com/react-plotly.js@1.0.2/dist/create-plotly-component.js"></script>
-    -->
 
-    <script src="libraries/jquery-3.4.1.min.js"></script>
-    <script src="ink.js"></script>
-    <script src="climateDebater.js"></script>
-    <script src="main.js"></script>
-    
-  <!-- 
-    <script src="radar.js" type="text/babel"></script>
-  -->
+  <script src="static/js/libraries/jquery-3.4.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
 
+
+  <script src="static/js/ink.js"></script>
+  <script src="static/js/climateDebater.js"></script>
+  <script src="static/js/main.js"></script>
+  <script src="static/js/app.js"></script>
+
+  <!-- <script src="radar.js" type="text/babel"></script> -->
 
 </body>
+
 </html>
