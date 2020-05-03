@@ -38,7 +38,9 @@ VAR climate_wording = "Climate Change"
            
 
 
-     CLIMATE DEBATER
+    //  CLIMATE DEBATER
+     
+
 
 Welcome to Climate Debater. This is an interactive narrative game that will take you through the fictional world town of Crowshurst as we explore the debate surrounding {climate_wording}. You will make choices that influence the world that your character inhabits and your choices will have consequences. You can play the game with a fictional character or as yourself! Whatever you decide, Climate Debater does not store any information from you outside of the game and will delete it on you leaving the browser. 
 //active voice is good
